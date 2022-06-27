@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="none" name="Failed suite [TestSuite]">
+  <parameter name="browser" value="phantomjs"/>
+  <test parallel="none" name="PhantomJS(failed)">
+    <parameter name="browser" value="phantomjs"/>
+    <classes>
+      <class name="testscripts.TestSwagLabs">
+        <methods>
+          <include name="Teardown"/>
+          <include name="Teardown"/>
+          <include name="Teardown"/>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="OrderProduct"/>
+        </methods>
+      </class> <!-- testscripts.TestSwagLabs -->
+    </classes>
+  </test> <!-- PhantomJS(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
