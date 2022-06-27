@@ -56,10 +56,8 @@ public class TestSwagLabs extends Libraries {
 		inventorypageobjects = new InventoryPageObjects(driver);
 		cartpageobjects = new CartPageObjects(driver);
 		checkoutpageobjects = new CheckoutPageObjects(driver);
-//		report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
-//		test = report.startTest("ExtentDemo");
 
-		try {
+	try {
 		//Click on Add to Cart
 		commonlibraries.explicitWait(inventorypageobjects.AddtoCartBikelight);
 		String text = inventorypageobjects.AddtoCartBikelight.getText();
@@ -102,19 +100,25 @@ public class TestSwagLabs extends Libraries {
 		commonlibraries.explicitWait(checkoutpageobjects.FinishBtn);
 		commonlibraries.clickElement(checkoutpageobjects.FinishBtn, "Finish");
 	
-		String ExpectedThanksMessage = "THANK YOU FOR YOUR ORDER";
 		//Verify the success Message
+		String ExpectedThanksMessage = "THANK YOU FOR YOUR ORDER";
 		commonlibraries.verifyElementToBeVisible(checkoutpageobjects.SuccessMessage, "Finish Button");
+		
 		if(checkoutpageobjects.SuccessMessage.getText().contains(ExpectedThanksMessage)) {
 		log.info("Execution Completed Successfully");
-		test.log(LogStatus.PASS, "Order a product");
+		test.log(LogStatus.PASS, "Ordered a product");
+		commonlibraries.takeScreenShotForPass();
 		}
 		else if(!checkoutpageobjects.SuccessMessage.getText().contains(ExpectedThanksMessage)) {
 		test.log(LogStatus.FAIL, "Failed to Order a product");
-		}}
-		catch(Exception e) {
-		test.log(LogStatus.FAIL, "Order a product"+ e.getMessage());
-		log.info("Execution Completed Successfully "+ e.getMessage());
+		commonlibraries.takeScreenShotForFail();
+		}
+	}
+	catch(Exception e) {
+		test.log(LogStatus.FAIL, "Failed to Order a product"+ e.getMessage());
+		log.info("Execution is not completed due to: "+ e.getMessage());
+		commonlibraries.takeScreenShotForFail();
+		junit.framework.Assert.fail("Failed" + e.getMessage());
 		}
 	}
 		
@@ -124,9 +128,11 @@ public class TestSwagLabs extends Libraries {
 				Thread.sleep(1000);
 				report.endTest(test);
 				report.flush();
-				} catch (Exception e) {
+				} 
+			catch (Exception e) {
 				log.info("Failed in createReport method due to exception: " + e.getMessage());
-			}
-		driver.quit();
+				commonlibraries.takeScreenShotForFail();
+				}
+			driver.quit();
 	}
 }
