@@ -1,2 +1,64 @@
-2022-06-26 04:49:41  INFO  CommonLibraries :130 - Current page title is www.saucedemo.com
-2022-06-26 04:50:50  INFO  CommonLibraries :69 - Element  not Found after waiting for 60 seconds null
+2022-06-27 03:20:53  INFO  CommonLibraries :130 - Current page title is Swag Labs
+2022-06-27 03:20:54  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:20:54  INFO  CommonLibraries :102 - Entered 'standard_user' to input text box
+2022-06-27 03:20:54  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-54.PNG
+2022-06-27 03:20:55  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:20:55  INFO  CommonLibraries :102 - Entered 'secret_sauce' to input text box
+2022-06-27 03:20:55  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-55.PNG
+2022-06-27 03:20:55  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-55.PNG
+2022-06-27 03:20:55  INFO  CommonLibraries :214 - Clicked on Login Button successfully
+2022-06-27 03:20:56  INFO  TestSwagLabs :66 - ADD TO CART
+2022-06-27 03:20:56  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-56.PNG
+2022-06-27 03:20:56  INFO  CommonLibraries :214 - Clicked on Add to Cart successfully
+2022-06-27 03:20:56  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-56.PNG
+2022-06-27 03:20:56  INFO  CommonLibraries :214 - Clicked on Cart Icon successfully
+2022-06-27 03:20:57  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-57.PNG
+2022-06-27 03:20:57  INFO  CommonLibraries :214 - Clicked on Check Out successfully
+2022-06-27 03:20:57  INFO  TestSwagLabs :81 - https://www.saucedemo.com/checkout-step-one.html
+2022-06-27 03:20:57  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:20:57  INFO  CommonLibraries :102 - Entered 'Saravanan' to input text box
+2022-06-27 03:20:57  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-57.PNG
+2022-06-27 03:20:58  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:20:58  INFO  CommonLibraries :102 - Entered 'P' to input text box
+2022-06-27 03:20:58  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-58.PNG
+2022-06-27 03:20:58  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:20:58  INFO  CommonLibraries :102 - Entered '600078' to input text box
+2022-06-27 03:20:59  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-59.PNG
+2022-06-27 03:20:59  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-59.PNG
+2022-06-27 03:20:59  INFO  CommonLibraries :214 - Clicked on Continue successfully
+2022-06-27 03:20:59  INFO  TestSwagLabs :98 - https://www.saucedemo.com/checkout-step-two.html
+2022-06-27 03:20:59  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-50-59.PNG
+2022-06-27 03:20:59  INFO  CommonLibraries :214 - Clicked on Finish successfully
+2022-06-27 03:20:59  INFO  TestSwagLabs :109 - Execution Completed Successfully
+2022-06-27 03:21:07  INFO  CommonLibraries :130 - Current page title is Swag Labs
+2022-06-27 03:21:07  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:21:07  INFO  CommonLibraries :102 - Entered 'standard_user' to input text box
+2022-06-27 03:21:08  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-07.PNG
+2022-06-27 03:21:08  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:21:08  INFO  CommonLibraries :102 - Entered 'secret_sauce' to input text box
+2022-06-27 03:21:08  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-08.PNG
+2022-06-27 03:21:08  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-08.PNG
+2022-06-27 03:21:08  INFO  CommonLibraries :214 - Clicked on Login Button successfully
+2022-06-27 03:21:09  INFO  TestSwagLabs :66 - ADD TO CART
+2022-06-27 03:21:09  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-09.PNG
+2022-06-27 03:21:09  INFO  CommonLibraries :214 - Clicked on Add to Cart successfully
+2022-06-27 03:21:09  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-09.PNG
+2022-06-27 03:21:09  INFO  CommonLibraries :214 - Clicked on Cart Icon successfully
+2022-06-27 03:21:10  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-10.PNG
+2022-06-27 03:21:10  INFO  CommonLibraries :214 - Clicked on Check Out successfully
+2022-06-27 03:21:10  INFO  TestSwagLabs :81 - https://www.saucedemo.com/checkout-step-one.html
+2022-06-27 03:21:10  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:21:10  INFO  CommonLibraries :102 - Entered 'Saravanan' to input text box
+2022-06-27 03:21:10  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-10.PNG
+2022-06-27 03:21:10  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:21:10  INFO  CommonLibraries :102 - Entered 'P' to input text box
+2022-06-27 03:21:10  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-10.PNG
+2022-06-27 03:21:11  INFO  CommonLibraries :118 - Input Textfiled is cleared
+2022-06-27 03:21:11  INFO  CommonLibraries :102 - Entered '600078' to input text box
+2022-06-27 03:21:11  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-11.PNG
+2022-06-27 03:21:11  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-11.PNG
+2022-06-27 03:21:11  INFO  CommonLibraries :214 - Clicked on Continue successfully
+2022-06-27 03:21:11  INFO  TestSwagLabs :98 - https://www.saucedemo.com/checkout-step-two.html
+2022-06-27 03:21:12  INFO  CommonLibraries :171 - C:\Users\M1066217\git\Interview-TrusTrace\TrusTrace\Screenshots\2022-06-27\StepScreenshots\2022-06-27-01-51-12.PNG
+2022-06-27 03:21:12  INFO  CommonLibraries :214 - Clicked on Finish successfully
+2022-06-27 03:21:12  INFO  TestSwagLabs :109 - Execution Completed Successfully

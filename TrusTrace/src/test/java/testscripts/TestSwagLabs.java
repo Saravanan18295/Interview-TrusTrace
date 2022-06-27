@@ -50,34 +50,14 @@ public class TestSwagLabs extends Libraries {
 	CartPageObjects cartpageobjects;
 	CheckoutPageObjects checkoutpageobjects;
 
-	@BeforeTest
-	public void report() throws InterruptedException{
-		report = new ExtentReports(System.getProperty("user.dir")+".reports/ExtentReportResults.html");
-		test = report.startTest("ExtentDemo");
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("MM_dd_yyyy_h_mm_ss a");
-		String formattedDate = sdf.format(date);
-		formattedDate = formattedDate.replace("-", "").replace(" ", "");
-		File mainFolder = new File("./report");
-		if (!mainFolder.exists()) {
-			mainFolder.mkdirs();
-		}
-		String projectname = "TrusTrace";
-		File ResPathFolder = new File("./report");
-		File PathFolderOuter = new File(
-				ResPathFolder.getAbsolutePath() + "\\Result_" + projectname + "_" + formattedDate);
-		File f = PathFolderOuter.getAbsoluteFile();
-		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		extentProperties.setReportPath(f + "/" + projectname + "_" + formattedDate + ".html");
-}
 
 	@Test
-	public void OrderProduct(){
+	public void OrderaProduct(){
 		inventorypageobjects = new InventoryPageObjects(driver);
 		cartpageobjects = new CartPageObjects(driver);
 		checkoutpageobjects = new CheckoutPageObjects(driver);
-		report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
-		test = report.startTest("ExtentDemo");
+//		report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
+//		test = report.startTest("ExtentDemo");
 
 		try {
 		//Click on Add to Cart
@@ -130,20 +110,18 @@ public class TestSwagLabs extends Libraries {
 		test.log(LogStatus.PASS, "Order a product");
 		}
 		else if(!checkoutpageobjects.SuccessMessage.getText().contains(ExpectedThanksMessage)) {
-		test.log(LogStatus.FAIL, "Order a product");
+		test.log(LogStatus.FAIL, "Failed to Order a product");
 		}}
 		catch(Exception e) {
-		test.log(LogStatus.FAIL, "Order a product");
+		test.log(LogStatus.FAIL, "Order a product"+ e.getMessage());
 		log.info("Execution Completed Successfully "+ e.getMessage());
 		}
 	}
 		
-	static ExtentTest test;
-	static ExtentReports report;
 	@AfterTest
 	public void Teardown() throws InterruptedException{
 			try {
-				Thread.sleep(10);
+				Thread.sleep(1000);
 				report.endTest(test);
 				report.flush();
 				} catch (Exception e) {

@@ -1,8 +1,11 @@
 package utils;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -19,9 +22,16 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.cucumber.listener.ExtentProperties;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.CartPageObjects;
 import pageObjects.CheckoutPageObjects;
@@ -42,7 +52,9 @@ public class BaseClass {
 	public static String LastName;
 	public static String PostalCode;
 	public static String CurrentURL;
-	
+	public ExtentTest test;
+	public ExtentReports report;
+
 	/**
 	**********************************************************************
 	* @MethodName : openBrowser()
@@ -53,9 +65,9 @@ public class BaseClass {
 	*/
 	
 	@Parameters("browser")
-	@BeforeTest
+	@Test
 	//Instantiate driver
-	public void openBrowser(String browser) {
+	public void OpenBrowser(String browser) {
 		try {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
@@ -85,13 +97,15 @@ public class BaseClass {
 			driver = new OperaDriver();
 		}
 		driver.manage().deleteAllCookies();
+		test.log(LogStatus.PASS, "Succesfully Launched the browser: " + browser);
 	} catch (Exception e) {
+		test.log(LogStatus.SKIP,"Test Skipped" + e.getMessage());
 		Assert.fail("Failed in initialize browser due to exception: " +e.getMessage());
 	}
 	}	
 	
 	@Test
-	public void Data() throws InvalidFormatException, IOException {	
+	public void TestData() throws InvalidFormatException, IOException {	
 		ExcelReader reader = new ExcelReader();
 		String userDir = System.getProperty("user.dir");
 		List<Map<String,String>> testData = 
@@ -101,6 +115,18 @@ public class BaseClass {
 		FirstName = testData.get(0).get("FirstName");
 		LastName = testData.get(0).get("LastName");
 		PostalCode = testData.get(0).get("PostalCode");
+		test.log(LogStatus.PASS, "Succesfully Login to the application");
+	}
+
+	@BeforeTest
+	public void report() throws InterruptedException{
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("MM_dd_yyyy_h_mm_ss a");
+		String formattedDate = sdf.format(date);
+		formattedDate = formattedDate.replace("-", "").replace(" ", "");
+		Thread.sleep(1000);
+		report = new ExtentReports(System.getProperty("user.dir")+"\\reports\\" + "_" + formattedDate + " " + "ExtentReportResults.html");
+		test = report.startTest("ExtentDemo");
 	}
 
 }
