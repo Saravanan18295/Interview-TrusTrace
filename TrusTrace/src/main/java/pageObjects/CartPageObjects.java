@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CartPageObjects {
 	
+	
 	@FindBy(id="checkout")
 	public WebElement CheckoutBtn;
 	
