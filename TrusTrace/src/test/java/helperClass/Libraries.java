@@ -40,10 +40,11 @@ public class Libraries extends BaseClass{
 		commonlibraries.sendKeys(landingpageobjects.PassWord, Password);
 		commonlibraries.clickElement(landingpageobjects.LoginBtn, "Login Button");
 		test.log(LogStatus.PASS, "Succesfully Logged in to the application");
-
+		commonlibraries.takeScreenShotForPass();
 	}
 	catch(Exception e) {
 		test.log(LogStatus.SKIP,"Test Skipped");
+		commonlibraries.takeScreenShotForFail();
 		Assert.fail("failed to login due to the exception "+ e.getMessage());
 		}
 	}
